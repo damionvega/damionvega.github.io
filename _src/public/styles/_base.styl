@@ -1,0 +1,85 @@
+// Reset
+
+*,
+*:after,
+*:before
+  box-sizing border-box
+
+::selection
+  color ivory
+  background lighten(lightblue, 20%)
+
+html,
+body
+  margin 0
+  padding 0
+
+body
+  font-family 'proxima-nova-alt', helvetica, sans-serif
+  background lighten(floralwhite, 50%)
+  color #444
+  margin 0
+  padding 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family 'essonnes-display'
+
+h1
+  font-size 4rem
+
+h2
+  font-size 3rem
+
+h3
+  font-size 2rem
+
+h4
+  font-size 1.6rem
+
+h5
+  font-size 1.2rem
+
+a
+  text-decoration none
+
+
+
+// Mixins
+
+border-radius(radius = 3px)
+  radius = arguments if length(arguments) > 1
+  border-radius radius
+
+position(position = static, top = auto, right = auto, bottom = auto, left = auto)
+  position position
+  top top
+  right right
+  bottom bottom
+  left left
+
+wh(w, h = w)
+  width w
+  height h
+
+clearfix()
+  clear both
+  &
+    zoom 1
+  &:before,
+  &:after
+    content ''
+    display table
+  &:after
+    clear both
+
+black()
+  rgba(0, 0, 0, arguments)
+
+white()
+  rgba(255, 255, 255, arguments)
+
