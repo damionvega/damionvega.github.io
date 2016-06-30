@@ -5,13 +5,14 @@ html.no-js
     title= title
     meta(name='description' content="This is Damion Vega's official personal site. Not to be confused with the many impostor sites.")
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
-    link(rel='dns-prefetch' href='//www.google-analytics.com')
-    link(rel='dns-prefetch' href='//maps.googleapis.com')
-    link(rel='shortcut icon' href='images/apple-touch-icon.png')
-    link(rel='shortcut icon' href='images/favicon.ico')
-    link(rel='stylesheet' href='styles/main.css')
+    link(rel='shortcut icon' href='/images/apple-touch-icon.png')
+    link(rel='shortcut icon' href='/images/favicon.ico')
+    link(rel='stylesheet' href='/styles/main.css')
+
     if current.source == 'about'
-      link(rel='stylesheet' href='styles/djv.css')
+      link(rel='stylesheet' href='/styles/djv.css')
+      link(rel='dns-prefetch' href='//www.google-analytics.com')
+      link(rel='dns-prefetch' href='//maps.googleapis.com')
 
     script(src='//use.typekit.net/idt4lmf.js')
     script.
@@ -28,7 +29,10 @@ html.no-js
         |  to improve your experience.
 
     // include ./_shared/nav.jade
-    != yield
+    .wrap
+      block content
+        != yield
+
 
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

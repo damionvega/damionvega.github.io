@@ -1,0 +1,23 @@
+{
+  "name": "djv.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/damionvega/djv.io.git"
+  },
+  "author": "Damion Vega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damionvega/djv.io/issues"
+  },
+  "homepage": "https://github.com/damionvega/djv.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "harp": "^0.20.3"
+  },
+  "scripts": {
+    "dev": "harp server --port 9001 & browser-sync start --proxy localhost:9001 --files public/* public/**/* --no-notify"
+  }
+}
