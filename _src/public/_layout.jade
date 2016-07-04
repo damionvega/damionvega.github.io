@@ -7,12 +7,13 @@ html.no-js
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
     link(rel='shortcut icon' href='/images/apple-touch-icon.png')
     link(rel='shortcut icon' href='/images/favicon.ico')
-    link(rel='stylesheet' href='/styles/main.css')
 
-    if current.source == 'about'
+    if current.source == 'aboot'
       link(rel='stylesheet' href='/styles/djv.css')
       link(rel='dns-prefetch' href='//www.google-analytics.com')
       link(rel='dns-prefetch' href='//maps.googleapis.com')
+    else
+      link(rel='stylesheet' href='/styles/main.css')
 
     script(src='//use.typekit.net/idt4lmf.js')
     script.

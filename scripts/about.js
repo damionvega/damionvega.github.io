@@ -1,36 +1,36 @@
 $(function () {
-  // Confirm box
-  var confirmBg  = document.querySelector('[data-hook="confirmBg"]')
-  var confirmBox = document.querySelector('[data-hook="confirmBox"]')
+  // // Confirm box
+  // var confirmBg  = document.querySelector('[data-hook="confirmBg"]')
+  // var confirmBox = document.querySelector('[data-hook="confirmBox"]')
 
-  confirmBg.style.display  = 'block'
-  confirmBox.style.display = 'block'
-  confirmBg.style.height = window.innerHeight + 'px'
+  // confirmBg.style.display  = 'block'
+  // confirmBox.style.display = 'block'
+  // confirmBg.style.height = window.innerHeight + 'px'
 
-  document.querySelector('[data-hook="disclaimer"]').innerHTML =
-    'This website contains an \'F\' word, two \'S\' words and I believe I may have even' +
-    ' used the \'E\' word (entrepreneur) <br/><br/>You cool with this?'
+  // document.querySelector('[data-hook="disclaimer"]').innerHTML =
+  //   'This website contains an \'F\' word, two \'S\' words and I believe I may have even' +
+  //   ' used the \'E\' word (entrepreneur) <br/><br/>You cool with this?'
 
-  var noButton  = document.querySelector('[data-hook="noButton"]')
-  var yesButton = document.querySelector('[data-hook="yesButton"]')
+  // var noButton  = document.querySelector('[data-hook="noButton"]')
+  // var yesButton = document.querySelector('[data-hook="yesButton"]')
 
-  noButton.addEventListener('click', function () {
-    document.body.style.transition = '1s'
-    document.body.style.opacity = 0
+  // noButton.addEventListener('click', function () {
+  //   document.body.style.transition = '1s'
+  //   document.body.style.opacity = 0
 
-    setTimeout(function () {
-      window.location.href = 'http://www.nocussing.com'
-    }, 600)
-  })
+  //   setTimeout(function () {
+  //     window.location.href = 'http://www.nocussing.com'
+  //   }, 600)
+  // })
 
-  yesButton.addEventListener('click', function () {
-    confirmBg.classList.add('conceal')
+  // yesButton.addEventListener('click', function () {
+  //   confirmBg.classList.add('conceal')
 
-    setTimeout(function () {
-      confirmBox.style.display = 'none'
-      confirmBg.style.display  = 'none'
-    }, 1000)
-  })
+  //   setTimeout(function () {
+  //     confirmBox.style.display = 'none'
+  //     confirmBg.style.display  = 'none'
+  //   }, 1000)
+  // })
 
 
   // Kern header
@@ -153,7 +153,6 @@ function mapInit() {
   ]
 
   map = new google.maps.Map(document.getElementById('map'), mapOptions).getMap()
-  console.log('map', map)
 
   startMarker.setMap(map)
   finishMarker.setMap(map)
